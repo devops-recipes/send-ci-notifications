@@ -1,0 +1,63 @@
+
+language: node_js
+
+integrations:
+  # http://docs.shippable.com/ci/shippableyml/#notifications
+  notifications:
+    # SLACK configuration
+    - integrationName: my_slack_notif
+      type: slack
+      recipients:
+        - "#channelOne"
+        - "#channelTwo"
+      branches:
+        only:             # 'except' tag is also supported
+          - master
+      on_success: always  # Other supported options are change and never, default is
+      on_failure: always  # Other supported options are change and never, default is
+      on_cancel: always   # Other supported options are change and never, default is
+      on_start: always    # Other supported option is never, default is
+      on_pull_request: always   # Other supported option is never, default is
+
+    # # Hipchat configuration
+    # - integrationName: my_hipchat_notif
+    #   type: hipchat
+    #   recipients:
+    #     - "#channelOne"
+    #     - "#channelTwo"
+    #     - "@userOne"
+    # # branches, on_success, on_failure, on_cancel, on_start, on_pull_request are also supported.
+    # # See Slack snippet for config guidance
+
+    # # IRC configuration
+    # - integrationName: irc  # integration name should always be irc
+    #   type: irc
+    #   recipients:
+    #     - "chat.freenode.net#channel1"
+    #     - "chat.freenode.net#channel2"
+    # # branches, on_success, on_failure, on_cancel, on_start, on_pull_request are also supported.
+    # # See Slack snippet for config guidance
+
+    # # Email configuration
+    # - integrationName: email      # integration name should always be email
+    #   type: email
+    #   recipients:
+    #     - exampleone@org.com
+    #     - exampletwo@org.com
+    # # branches, on_success, on_failure, on_cancel, on_start, on_pull_request are also supported.
+    # # See Slack snippet for config guidance
+
+    # # Notify with webhooks if your provider isn't natively supported
+    # - integrationName: my_webhook_int
+    #   type: webhook
+    #   payload:
+    #     - foo=$FOO
+    #     - bar=$BAR
+    #   # # branches, on_success, on_failure, on_cancel, on_start, on_pull_request are also supported.
+    #   # # See Slack snippet for config guidance
+
+
+build:
+  ci:
+
+    - echo "Your CI commands go here"
