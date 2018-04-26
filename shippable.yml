@@ -59,5 +59,4 @@ integrations:
 
 build:
   ci:
-
     - echo "Your CI commands go here"
