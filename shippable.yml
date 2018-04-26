@@ -11,12 +11,12 @@ integrations:
         - "#channelOne"
         - "#channelTwo"
       branches:
-        only:             # 'except' tag is also supported
+        only:                   # 'except' tag is also supported
           - master
-      on_success: always  # Other supported options are change and never, default is
-      on_failure: always  # Other supported options are change and never, default is
-      on_cancel: always   # Other supported options are change and never, default is
-      on_start: always    # Other supported option is never, default is
+      on_success: always        # Other supported options are change and never, default is
+      on_failure: always        # Other supported options are change and never, default is
+      on_cancel: always         # Other supported options are change and never, default is
+      on_start: always          # Other supported option is never, default is
       on_pull_request: always   # Other supported option is never, default is
 
     # # Hipchat configuration
@@ -30,7 +30,7 @@ integrations:
     # # See Slack snippet for config guidance
 
     # # IRC configuration
-    # - integrationName: irc  # integration name should always be irc
+    # - integrationName: irc    # integration name should always be irc
     #   type: irc
     #   recipients:
     #     - "chat.freenode.net#channel1"
@@ -39,7 +39,7 @@ integrations:
     # # See Slack snippet for config guidance
 
     # # Email configuration
-    # - integrationName: email      # integration name should always be email
+    # - integrationName: email  # integration name should always be email
     #   type: email
     #   recipients:
     #     - exampleone@org.com
@@ -53,8 +53,8 @@ integrations:
     #   payload:
     #     - foo=$FOO
     #     - bar=$BAR
-    #   # # branches, on_success, on_failure, on_cancel, on_start, on_pull_request are also supported.
-    #   # # See Slack snippet for config guidance
+    # # branches, on_success, on_failure, on_cancel, on_start, on_pull_request are also supported.
+    # # See Slack snippet for config guidance
 
 
 build:
